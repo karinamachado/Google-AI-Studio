@@ -1,0 +1,221 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+
+  /* Forge Identity - Neutrals (Dark Scale) */
+  --neutral-950: #0A0A0A;
+  --neutral-900: #111111;
+  --neutral-850: #181818;
+  --neutral-800: #1E1E1E;
+  --neutral-700: #2A2A2A;
+  --neutral-600: #3A3A3A;
+  --neutral-400: #6B6B6B;
+  --neutral-200: #B0B0B0;
+  --neutral-100: #D9D9D9;
+  --neutral-50: #F0F0F0;
+  --neutral-0: #FFFFFF;
+
+  /* Forge Identity - Core Chromatic */
+  --orange-vivid: #E8400A;
+  --orange-hot: #FF4D0D;
+  --orange-muted: #C03200;
+  --red-ember: #B22A00;
+  --red-glow: #FF2200;
+  --gray-steel: #5C6B7A;
+
+  /* Semantic Colors */
+  --background: var(--neutral-900);
+  --foreground: var(--neutral-0);
+  --card: var(--neutral-800);
+  --card-foreground: var(--neutral-0);
+  --popover: var(--neutral-800);
+  --popover-foreground: var(--neutral-0);
+  --primary: var(--orange-vivid);
+  --primary-foreground: var(--neutral-0);
+  --secondary: var(--neutral-700);
+  --secondary-foreground: var(--neutral-0);
+  --muted: var(--neutral-400);
+  --muted-foreground: var(--neutral-200);
+  --accent: var(--orange-vivid);
+  --accent-foreground: var(--neutral-0);
+  --destructive: #C62828;
+  --destructive-foreground: var(--neutral-0);
+  --border: var(--neutral-700);
+  --input: var(--neutral-800);
+  --input-background: var(--neutral-800);
+  --switch-background: var(--neutral-600);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--orange-vivid);
+  --chart-1: var(--orange-vivid);
+  --chart-2: var(--orange-hot);
+  --chart-3: var(--red-ember);
+  --chart-4: var(--neutral-400);
+  --chart-5: var(--neutral-200);
+  --radius: 0.5rem;
+  --sidebar: var(--neutral-900);
+  --sidebar-foreground: var(--neutral-0);
+  --sidebar-primary: var(--orange-vivid);
+  --sidebar-primary-foreground: var(--neutral-0);
+  --sidebar-accent: var(--neutral-800);
+  --sidebar-accent-foreground: var(--neutral-0);
+  --sidebar-border: var(--neutral-700);
+  --sidebar-ring: var(--orange-vivid);
+
+  /* Spacing System - 8pt base grid */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+  --space-9: 128px;
+
+  /* Border Radius */
+  --radius-sharp: 0px;
+  --radius-subtle: 4px;
+  --radius-card: 8px;
+}
+
+.dark {
+  /* Dark mode uses same Forge Identity tokens */
+  --background: var(--neutral-900);
+  --foreground: var(--neutral-0);
+  --card: var(--neutral-800);
+  --card-foreground: var(--neutral-0);
+  --popover: var(--neutral-800);
+  --popover-foreground: var(--neutral-0);
+  --primary: var(--orange-vivid);
+  --primary-foreground: var(--neutral-0);
+  --secondary: var(--neutral-700);
+  --secondary-foreground: var(--neutral-0);
+  --muted: var(--neutral-400);
+  --muted-foreground: var(--neutral-200);
+  --accent: var(--orange-vivid);
+  --accent-foreground: var(--neutral-0);
+  --destructive: #C62828;
+  --destructive-foreground: var(--neutral-0);
+  --border: var(--neutral-700);
+  --input: var(--neutral-800);
+  --ring: var(--orange-vivid);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: var(--orange-vivid);
+  --chart-2: var(--orange-hot);
+  --chart-3: var(--red-ember);
+  --chart-4: var(--neutral-400);
+  --chart-5: var(--neutral-200);
+  --sidebar: var(--neutral-900);
+  --sidebar-foreground: var(--neutral-0);
+  --sidebar-primary: var(--orange-vivid);
+  --sidebar-primary-foreground: var(--neutral-0);
+  --sidebar-accent: var(--neutral-800);
+  --sidebar-accent-foreground: var(--neutral-0);
+  --sidebar-border: var(--neutral-700);
+  --sidebar-ring: var(--orange-vivid);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
